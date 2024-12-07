@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login {
+            background-color:aquamarine;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .error {
+            border-color: #e63946 !important;
+            box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+        }
+
+        .error-message {
+            color: #e63946;
+            font-size: 12px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .login_btn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+        
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color:gray;
+        }
+
+        button[type="reset"]:hover {
+            background-color: gray;
+        }
+
+        #login form {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="login">
+        <form action="../Controller/Controller.php" method="post">
+            <h4 class="title">Đăng ký</h4>
+            <div class="">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="fistname" >
+                <br><br>
+            </div>
+            <div class="">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname" id="lastname" >
+                <br><br>
+            </div>
+            <div class="">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" >
+                <br><br>
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" >
+            </div>
+            <div class="">
+                <label for="role">Role</label>
+                <input type="text" name="role" id="role" >
+                <br><br>
+            </div>
+            <div class="registerbtn">
+                <button type="submit" name="register">OK</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+   
+</body>
+
+</html>
